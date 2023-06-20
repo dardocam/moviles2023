@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="codigo" />
+    <!--Puedes descargar el script e incluirlo de manera local si así prefieres-->
+    <script src="https://unpkg.com/qrious@4.0.2/dist/qrious.js"></script>
+    <script>
+      const qr = new QRious({
+        element: document.querySelector("#codigo"),
+        value: "Este es el secreto que guarda un simple QR", // La URL o el texto
+        size: 300,
+        backgroundAlpha: 0, // 0 para fondo transparente
+        foreground: "#111", // Color del QR
+        level: "H", // Puede ser L,M,Q y H (L es el de menor nivel, H el mayor)
+      });
+      console.log(qr.value);
+    </script>
+  </body>
+</html>
