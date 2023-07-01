@@ -9,9 +9,7 @@ search.addEventListener("click", () => {
 
   if (city === "") return;
 
-  fetch(
-    `http://localhost/api-clima/api-necochea-clima-fake/api-clima.php?q=${city}`
-  )
+  fetch(`http://localhost/api-clima/php/api-clima.php?q=${city}`)
     .then((response) => response.json())
     .then((json) => {
       if (json.cod === "404") {
